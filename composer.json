@@ -1,0 +1,14 @@
+{
+    "name": "infotex/sfsassplugin",
+    "description": "A symfony 1.x plugin utilizing the phpsass SASS/SCSS compiler for PHP",
+    "type": "symfony1-plugin",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.0"
+    },
+    "authors": [
+        {
+            "name": "Infotex UK"
+        }
+    ]
+}
