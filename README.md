@@ -7,6 +7,13 @@ The plugin allows you to create SASS/SCSS stylesheets wherever you want and add 
 
 Because the plugin overrides the `sfWebResponse::addStylesheet` function call, it will recognise when it needs to serve a compiled CSS file rather than a SASS/SCSS file and will at that point either serve up the already-compiled version of the given file if nothing has changed in the original, or re-compile it and serve the newly compiled version.
 
+## Requirements
+
+- PHP 8.0 or higher
+- Symfony 1.x
+
+**Note:** For PHP 7.4 and earlier, please use an older version of this plugin. This version has been updated for PHP 8.x compatibility.
+
 
 Installation & Usage
 --------------------
@@ -44,3 +51,14 @@ php symfony plugin:publish-assets sfSassPlugin
 chmod 775 plugins/sfSassPlugin/web/css
 ```
 6. Create scss/sass files wherever you want and add them to view.yml files!
+
+## PHP 8.x Compatibility
+
+This version of sfSassPlugin has been updated for compatibility with PHP 8.0, 8.1, 8.2, 8.3, and 8.4.
+
+Key changes:
+- Replaced deprecated `create_function()` with anonymous functions
+- Fixed curly brace array/string access syntax
+- Updated PHPUnit tests for modern PHPUnit versions
+
+For more details, see [PHP8_COMPATIBILITY.md](PHP8_COMPATIBILITY.md).
